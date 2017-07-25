@@ -1,0 +1,59 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/msotto/UTI-personal-projects/qa-helper-2/content/" . "logic/")
+ ("c:/Users/msotto/UTI-personal-projects/qa-helper-2/" . "content/")
+ ("c:/Users/msotto/UTI-personal-projects/" . "qa-helper-2/")
+ ("c:/Users/msotto/" . "UTI-personal-projects/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "c:/Users/msotto/UTI-personal-projects/excelToJson/"
+ "c:/Users/msotto/UTI-personal-projects/qa-helper-2/"
+ "c:/Users/msotto/UTI-personal-projects/qa-helper-2/content/logic/"
+ "c:/Users/msotto/notes/"
+ "c:/Users/msotto/"
+ "c:/Users/msotto/UTI-personal-projects/qa-helper-2/content/"
+ "c:/Users/msotto/UTI-personal-projects/qa-helper-2/background/"
+ "c:/Users/msotto/UTI-personal-projects/qa-helper-2/ui/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "excel-to-json.js"
+ "utilities.js"
+ "templateLoad.js"
+ "addBug.js"
+ "definitions.org"
+ ".emacs"
+ "c-sharp.org"
+ "controller.js"
+ "manifest.json"
+ "style.css"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/msotto/UTI-personal-projects/qa-helper-2/" (22897 16805 0 0) "ui/" "README.org" "README.html~" "README.html" "package.json" "manifest.json" "lib/" "icon48.xcf" "icon48.png" "icon16.xcf" "icon16.png" "icon128.xcf" "icon128.png" "help.html" "documentation/" "content/" "builds/" "background/" ".git/" "#README.org#" "../" "./")
+
+ ("c:/Users/msotto/" (22897 15162 0 0) "Web Stuff/" "Videos/" "UTI-personal-projects/" "tests/" "Templates/" "Sublime/" "Start Menu/" "Source/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "QA-Tester-Helper/" "qa-helper-2/" "PrintHood/" "Pictures/" "org/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{6cced2f1-6e01-11de-8bed-001e0bcd1824}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{6cced2f1-6e01-11de-8bed-001e0bcd1824}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{6cced2f1-6e01-11de-8bed-001e0bcd1824}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "notes/" "node_project/" "NetHood/" "My Documents/" "Music/" "Mid-Internship Progress Report.docx" "Local Settings/" "Links/" "Favorites/" "Downloads/" "Documents/" "Desktop/" "Data/" "Cookies/" "Contacts/" "coding_ideas.js~" "coding_ideas.js" "coding/" "Application Data/" "AppData/" ".v8flags.5.8.283.41.3efcbfa5f5c09c0ef5de58277006fcb0.json" ".rnd" ".nuget/" ".node_repl_history" ".gnupg/" ".emacs~" ".emacs.d/" ".emacs" ".config/" ".#ideas.txt" ".#coding_ideas.js" "#ideas.txt#" "#coding_ideas.js#" "#.emacs#" "../" "./")
+
+ ("c:/Users/msotto/UTI-personal-projects/qa-helper-2/content/logic/" (22897 16276 0 0) "utilities.js" "templateLoad.js" "contextScripts.js" "addBug2.js" "addBug.js" ".#utilities.js" "#utilities.js#" "#addBug.js#" "../" "./")
+
+ ("c:/Users/msotto/notes/" (22897 3484 0 0) "README.md" "img/" "definitions.org~" "definitions.org" "c-sharp.org~" "c-sharp.org" "c#.org" ".git/" "../" "./")
+
+ ("c:/Users/msotto/UTI-personal-projects/qa-helper-2/content/" (22896 61317 0 0) "preload.js" "logic/" "data/" "controller.js" "../" "./")
+
+ ("c:/Users/msotto/UTI-personal-projects/qa-helper-2/background/" (22896 61132 0 0) "logic/" "controller.js" "../" "./")
+
+ ("c:/Users/msotto/UTI-personal-projects/qa-helper-2/ui/" (22878 38701 0 0) "style.css" "../" "./")
+
+ ("c:/Users/msotto/UTI-personal-projects/notes/" (22885 17411 0 0) "engine_notes.txt" "../" "./")
+
+ ("c:/Users/msotto/UTI-personal-projects/" (22887 38110 0 0) "qa-helper-2/" "qa-helper/" "notes.txt~" "notes.txt" "notes/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

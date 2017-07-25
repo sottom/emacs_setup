@@ -1,0 +1,22 @@
+
+;; ----- smex-history -----
+(
+ package-install
+ magit-status
+ evil-lion-left
+ align-regexp
+ align-entire
+ list-packages
+ tabbar-mode
+)
+
+;; ----- smex-data -----
+(
+ (list-packages . 2)
+ (package-install . 7)
+ (tabbar-mode . 2)
+ (align-entire . 1)
+ (align-regexp . 1)
+ (evil-lion-left . 1)
+ (magit-status . 1)
+)
