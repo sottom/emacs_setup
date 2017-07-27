@@ -1,26 +1,15 @@
-;; Initialize package loader
-(package-initialize)
+
+;; Initialize installed packages
+(package-initialize)  
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/#/"))
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-
-
-;; autolode files? https://www.emacswiki.org/emacs/AutoInstall
-(add-to-list 'load-path (expand-file-name "~/elisp"))
-(require 'auto-install)
-(auto-install-compatibility-setup)
-
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 ;; LINE NUMBERING
 ;; get line numbers
 (global-linum-mode)
 ;; get line numbers relative to the line I'm on
 (linum-relative-global-mode)
-
-
-;; ELDOC MODE
-(eldoc-mode 1)
 
 
 ;; SET UP VIM KEY BINDINGS
@@ -50,6 +39,7 @@
 (global-set-key (kbd "C-'") 'evil-prev-buffer)
 (global-set-key (kbd "C-;") 'buf-move-right)
 (global-set-key (kbd "C-,") 'buf-move-left)
+(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 
 ;; REMOVE TOOLBAR FROM WINDOW
@@ -60,12 +50,12 @@
 
 
 ;; SNIPPETS
-;;(yas-global-mode)
+(yas-global-mode 1)
 
 
 ;; SKEWER LIVE UPDATE HTML, CSS, JS
-;; (require 'simple-httpd)
-;; (skewer-setup)
+(require 'simple-httpd)
+(skewer-setup)
 
 
 ;; ORG MODE 
@@ -119,40 +109,8 @@
   ;; causes an error if set
   ;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-; Add proper word wrapping
-(global-visual-line-mode t)
 
-
-; save the place in files
-(require 'saveplace)
-(setq-default save-place t)
-
-
-(require 'evil-surround)
-(global-evil-surround-mode 1)
-
-;;autocomplete parentheses
-;; (smartparens-global-mode t)
-
-
-;; json mode
-(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
-(global-set-key (kbd "C-x j")'json-pretty-print)
-
-;; multiple cursors
-(require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-;; autocomplete mode
-(global-auto-complete-mode)
-;;autocomplete js2-mode
-;; (add-hook 'js2-mode-hook 'ac-js2-mode)
-;; `(setq ac-js2-evaluate-calls t)'
-
-
+;; THEMES SET UP BY CUSOMIZE-THEMES COMMAND
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -167,7 +125,7 @@
  '(cua-normal-cursor-color "#657b83")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (dracula)))
+ '(custom-enabled-themes (quote (atom-dark)))
  '(custom-safe-themes
    (quote
     ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "e9460a84d876da407d9e6accf9ceba453e2f86f8b86076f37c08ad155de8223c" "ab0950f92dc5e6b667276888cb0cdbc35fd1c16f667170a62c15bd3ed5ae5c5a" "19ba41b6dc0b5dd34e1b8628ad7ae47deb19f968fe8c31853d64ea8c4df252b8" "ac16245796399c31a7c3ab6a4c0ecf88add866a988d2928248a260b8149ea4ad" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
@@ -242,7 +200,51 @@
  )
 
 
+
+; Add proper word wrapping
+(global-visual-line-mode t)
+
+
+; save the place in files
+(require 'saveplace)
+(setq-default save-place t)
+
+
+;; UPDATED PACKAGE LIST UI
+(require 'paradox)
+(paradox-enable)
+
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
+;;autocomplete parentheses
+(smartparens-global-mode t)
+
+
+;; json mode
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
+(global-set-key (kbd "C-x j")'json-pretty-print)
+
+
+;; multiple cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
+;; autocomplete mode
+;; (global-auto-complete-mode)
+;;autocomplete js2-mode
+;; (add-hook 'js2-mode-hook 'ac-js2-mode)
+;; `(setq ac-js2-evaluate-calls t)'
+
+
 ;; EMMET MODE
 (emmet-mode)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . html-mode))
 (global-set-key (kbd "TAB") 'emmet-expand-line)
+
+;; jump to definition
+(dumb-jump-mode)
