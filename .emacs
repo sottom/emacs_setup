@@ -23,6 +23,8 @@
 (require 'evil-numbers)
 (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(global-set-key (kbd "M-j") 'goto-char)
+;; (global-set-key (kbd "C-c C-c") 'keyboard-quit)
 
 ;; CHANGE THE LOOK OF EMACS SIDE BAR
 ;; change the current line symbol to absolute linenum ("")
@@ -36,10 +38,11 @@
 
 
 ;; NEW KEY BINDINGS
-(global-set-key (kbd "C-'") 'evil-prev-buffer)
+(global-set-key (kbd "C-u") 'evil-prev-buffer)
+(global-set-key (kbd "C-j") 'evil-next-buffer)
 (global-set-key (kbd "C-;") 'buf-move-right)
-(global-set-key (kbd "C-,") 'buf-move-left)
-(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-l") 'buf-move-left)
+;; (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 
 ;; REMOVE TOOLBAR FROM WINDOW
@@ -125,10 +128,10 @@
  '(cua-normal-cursor-color "#657b83")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (atom-dark)))
+ '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "e9460a84d876da407d9e6accf9ceba453e2f86f8b86076f37c08ad155de8223c" "ab0950f92dc5e6b667276888cb0cdbc35fd1c16f667170a62c15bd3ed5ae5c5a" "19ba41b6dc0b5dd34e1b8628ad7ae47deb19f968fe8c31853d64ea8c4df252b8" "ac16245796399c31a7c3ab6a4c0ecf88add866a988d2928248a260b8149ea4ad" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("6ee6f99dc6219b65f67e04149c79ea316ca4bcd769a9e904030d38908fd7ccf9" "eea01f540a0f3bc7c755410ea146943688c4e29bea74a29568635670ab22f9bc" "3629b62a41f2e5f84006ff14a2247e679745896b5eaa1d5bcfbc904a3441b0cd" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "e9460a84d876da407d9e6accf9ceba453e2f86f8b86076f37c08ad155de8223c" "ab0950f92dc5e6b667276888cb0cdbc35fd1c16f667170a62c15bd3ed5ae5c5a" "19ba41b6dc0b5dd34e1b8628ad7ae47deb19f968fe8c31853d64ea8c4df252b8" "ac16245796399c31a7c3ab6a4c0ecf88add866a988d2928248a260b8149ea4ad" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(fci-rule-color "#383838")
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
@@ -248,3 +251,20 @@
 
 ;; jump to definition
 (dumb-jump-mode)
+
+;; highlight line
+(global-hl-line-mode 1)
+
+;; (global-set-key (kbd "Q") 'align-regexp)
+
+
+;; file-browser
+(add-to-list 'load-path "/directory/containing/neotree/")
+
+(require 'neotree)
+
+;; (defun neo-config ()
+(global-set-key (kbd "C-c C-c") 'neotree-quick-look) 
+  ;; )
+;; add to hook
+;; (add-hook 'neotree-mode-hook 'neo-config)
